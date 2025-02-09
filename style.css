@@ -52,9 +52,16 @@ hr {
 }
 
 h1, h2, h3 {
-    font-weight: 100;
+    font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 0;
+    color: #333; /* Darker color for better visibility */
+    border-bottom: 2px; /* Underline effect */
+    display: inline-block;
+    padding-bottom: 5px;
 }
+
+
 
 #mainLeft {
     border-right: 1px solid lightgray;
