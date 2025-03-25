@@ -1,71 +1,111 @@
+/* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    max-width: 960px;
+    font-size: 16px;
+    max-width: 900px;
     margin: auto;
-}
-h1 {
-    font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-h2 {
-    font-size: 1.5em;
-    padding-bottom: 1em;
-}
-
-h3 {
-    font-size: 1.5em;
-    padding-bottom: 1em;
-}
-
-
-    main { 
-        display: grid;
-        grid-template-columns: 40% 60%;
-        margin-top: 3em;
-    }
-    
+/* Header */
 header {
     text-align: center;
-    margin: auto 2em;
+    margin: 2em 0;
 }
 
+h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.3em;
+    padding: 0.5em 0;
+    color: #222;
+    text-transform: uppercase;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+}
+
+/* Headings */
+h2, h3 {
+    font-size: 1.8em;
+    padding-bottom: 0.5em;
+    color: #444;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+}
+
+/* Layout */
+main { 
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 2em;
+    margin-top: 2em;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+#mainLeft {
+    border-right: 2px solid #ddd;
+    padding-right: 1.5em;
+}
+
+/* Right Section */
+#mainRight {
+    padding-left: 1.5em;
+}
+
+/* Sections */
 section {
-    margin: auto 1em 4em 2em;
+    margin-bottom: 2em;
 }
 
-i {
-    margin-right: .5em;
-}
-
+/* Paragraphs */
 p {
-    margin: .2em auto
+    margin: 0.5em 0;
 }
 
+/* Icons */
+i {
+    margin-right: 0.5em;
+    color: #007bff;
+}
+
+/* Horizontal Rule */
 hr {
     border: none;
     background-color: lightgray;
     height: 1px;
+    margin: 1.5em 0;
 }
 
-h1, h2, h3 {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    color: #333; /* Darker color for better visibility */
-    border-bottom: 2px; /* Underline effect */
-    display: inline-block;
-    padding-bottom: 5px;
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-
-
-#mainLeft {
-    border-right: 1px solid lightgray;
+ul li {
+    margin: 0.5em 0;
+    display: flex;
+    align-items: center;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        display: block;
+    }
 
+    #mainLeft {
+        border-right: none;
+        padding-right: 0;
+    }
 
+    #mainRight {
+        padding-left: 0;
+    }
+}
