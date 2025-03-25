@@ -4,7 +4,7 @@ body {
     font-size: 16px;
     max-width: 900px;
     margin: auto;
-    background-color: #f8f9fa;
+    background: #f8f9fa;
     color: #333;
     line-height: 1.6;
 }
@@ -12,100 +12,115 @@ body {
 /* Header */
 header {
     text-align: center;
-    margin: 2em 0;
+    padding: 2em 0;
 }
 
 h1 {
     font-size: 2.5em;
-    letter-spacing: 0.3em;
-    padding: 0.5em 0;
-    color: #222;
     text-transform: uppercase;
-    border-bottom: 3px solid #007bff;
-    display: inline-block;
+    font-weight: bold;
 }
 
-/* Headings */
 h2, h3 {
-    font-size: 1.8em;
-    padding-bottom: 0.5em;
-    color: #444;
+    font-size: 1.5em;
     text-transform: uppercase;
+    font-weight: bold;
+    color: #222;
     border-bottom: 2px solid #007bff;
     display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 1em;
 }
 
 /* Layout */
-main { 
+main {
     display: grid;
     grid-template-columns: 35% 65%;
-    gap: 2em;
-    margin-top: 2em;
+    gap: 1.5em;
     background: white;
     padding: 2em;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Left Section */
 #mainLeft {
     border-right: 2px solid #ddd;
     padding-right: 1.5em;
+    text-align: center;
 }
 
-/* Right Section */
-#mainRight {
-    padding-left: 1.5em;
+/* Profile Image */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    background: #007bff;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Contact & Info */
+.contact-info {
+    font-size: 14px;
+    margin-top: 1em;
+}
+
+.contact-info i {
+    color: #007bff;
+    margin-right: 0.5em;
 }
 
 /* Sections */
 section {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
-/* Paragraphs */
-p {
-    margin: 0.5em 0;
+/* Skills & Achievements */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }
 
-/* Icons */
-i {
-    margin-right: 0.5em;
-    color: #007bff;
+.skills-list span {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
 }
 
-/* Horizontal Rule */
-hr {
-    border: none;
-    background-color: lightgray;
-    height: 1px;
-    margin: 1.5em 0;
-}
-
-/* Lists */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 0.5em 0;
+/* Language Proficiency */
+.language-bar {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
-/* Responsive Design */
+.language-bar .dot {
+    width: 10px;
+    height: 10px;
+    background: lightgray;
+    border-radius: 50%;
+}
+
+.language-bar .dot.filled {
+    background: #007bff;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     main {
         display: block;
     }
-
     #mainLeft {
         border-right: none;
         padding-right: 0;
-    }
-
-    #mainRight {
-        padding-left: 0;
+        text-align: left;
     }
 }
